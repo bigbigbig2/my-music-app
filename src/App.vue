@@ -1,28 +1,36 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <!-- app
+    <input type="button" value="点我试试" @click="sayHi"> -->
+    <!-- 头部组件 -->
+    <top></top>
+    <!-- 主体组件 -->
+    <mari></mari>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+// 导入
+import top from './components/01.top.vue'
+import mari from './components/02.mari.vue'
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  // 注册组件
+  components:{
+    top,// top:top
+    mari// index:index
+  },
+  methods:{
+    sayHi(){
+      alert('你好吗')
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+*{
+  margin: 0;
+  padding: 0;
 }
+
 </style>
