@@ -183,6 +183,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'playlist',
   data() {
@@ -193,6 +194,17 @@ export default {
       // 页码
       page: 1
     };
+  },
+  created(){
+    axios({
+      url:"https://autumnfish.cn/playlist/detail",
+      method:"get",
+      params:{
+        id:2533823960
+      }
+    }).then(res=>{
+      console.log(res)
+    })
   },
   methods: {
     handleCurrentChange(val) {

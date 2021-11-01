@@ -56,7 +56,12 @@ let router = new VueRouter({
     {//搜索结果页
       path:"/result",
       component:result
-    }
+    },
+    {
+      //歌单详情页
+      path: '/playlist',
+      component: playlist
+    },
   ]
 })
 
