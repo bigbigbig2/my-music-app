@@ -42,7 +42,7 @@
     methods: {
       toResult(){
         if(this.inputValue == ''){
-          //element ui的提升框
+          //element ui的提示框
           this.$message.warning('请输入内容')
         }else{ 
           //路由跳转到搜索结果页并且件输入框的内容传递过去

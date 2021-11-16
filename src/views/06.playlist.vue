@@ -1,5 +1,6 @@
 <template>
   <div class="playlist-container">
+    <!-- 顶部歌单信息 -->
     <div class="top-wrap">
       <div class="img-wrap">
         <img src="../assets/playListCover.jpg" alt="" />
@@ -34,13 +35,14 @@
         </div>
       </div>
     </div>
+    <!-- 底下歌曲列表与评论列表 -->
     <el-tabs v-model="activeIndex">
       <el-tab-pane label="歌曲列表" name="1">
         <table class="el-table playlit-table">
           <thead>
             <th></th>
             <th></th>
-            <th>音乐标题</th>
+            <th>歌名</th>
             <th>歌手</th>
             <th>专辑</th>
             <th>时长</th>
@@ -54,6 +56,7 @@
                   <span class="iconfont icon-play"></span>
                 </div>
               </td>
+              <!-- 歌名 -->
               <td>
                 <div class="song-wrap">
                   <div class="name-wrap">
@@ -196,15 +199,15 @@ export default {
     };
   },
   created(){
+
+    let url="https://autumnfish.cn//playlist/detail?id=2533823960"
+    console.log(url)
     axios({
-      url:"https://autumnfish.cn/playlist/detail",
-      method:"get",
-      params:{
-        id:2533823960
-      }
+      url,
     }).then(res=>{
       console.log(res)
     })
+     
   },
   methods: {
     handleCurrentChange(val) {

@@ -1,6 +1,6 @@
 <template>
   <div class="playlists-container">
-    <!-- 同步 -->
+    <!-- 头部 -->
     <div class="top-card">
       <div class="icon-wrap">
         <!-- 封面 -->
